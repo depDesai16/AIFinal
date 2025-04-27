@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Text Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LLM Text Generator</h1>
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        </header>
+        <main>
+            <div id="chat-container">
+                <div id="chat-log"></div>
+                <div id="input-container">
+                    <label for="prompt">Prompt:</label>
+                    <textarea id="prompt" placeholder="Enter your prompt here..."></textarea>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="length">Length:</label>
+                            <input type="number" id="length" placeholder="100" value="100">
+                        </div>
+                        <div class="control-group">
+                            <label for="temperature">Temperature:</label>
+                            <input type="number" id="temperature" placeholder="0.8" step="0.1" value="0.8">
+                        </div>
+                        <div class="control-group">
+                            <label for="k">Top-k:</label>
+                            <input type="number" id="k" placeholder="10" value="10">
+                        </div>
+                        <button id="generate-btn">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
